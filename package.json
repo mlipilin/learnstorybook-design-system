@@ -2,6 +2,7 @@
   "name": "learnstorybook-design-system-template",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://mlipilin.github.io/learnstorybook-design-system",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -20,7 +21,10 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "chromatic": "npx chromatic --project-token=f548104b11de"
+    "build-storybook-docs": "build-storybook  --docs",
+    "chromatic": "npx chromatic --project-token=f548104b11de",
+    "predeploy": "npm run build-storybook-docs",
+    "deploy-storybook": "gh-pages -d storybook-static"
   },
   "eslintConfig": {
     "extends": [
@@ -62,6 +66,7 @@
     "@storybook/react": "^6.4.19",
     "@storybook/testing-library": "^0.0.9",
     "chromatic": "^6.4.3",
+    "gh-pages": "^3.2.3",
     "prettier": "^2.5.1"
   }
 }
